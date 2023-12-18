@@ -7,8 +7,8 @@ export const SearchLoupeIcon = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       x="0px"
       y="0px"
-      width="18"
-      height="18"
+      width="20"
+      height="20"
       viewBox="0 0 612.08 612.08"
       style={
         { enableBackground: "new 0 0 612.08 612.08" } as React.CSSProperties

@@ -4,7 +4,7 @@ import { SearchInput, SearchInputContainer } from "./styles";
 export const SearchBar: React.FC = () => {
   return (
     <SearchInputContainer>
-      <SearchInput />
+      <SearchInput placeholder='Buscar...' />
       <SearchLoupeIcon />
     </SearchInputContainer>
   );
