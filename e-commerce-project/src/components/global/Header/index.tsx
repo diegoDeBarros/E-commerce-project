@@ -10,10 +10,12 @@ import {
 import ShoppingCartIconPng from "../../../icons/shopping-cart.png";
 import ProfileIconPng from "../../../icons/profile-icon.png";
 import { SearchBar } from "../Input/SearchBar";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { VerifyUserDevice } from "../../../contexts/verifyUserDevice";
 
 export const Header: React.FC = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
+  const {} = useContext(VerifyUserDevice)
 
   return (
     <>
