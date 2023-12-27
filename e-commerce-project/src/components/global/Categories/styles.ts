@@ -4,6 +4,7 @@ export const CategoryBarContainer = styled.nav`
 background-color:gray;
 width: 100%;
 height:auto;
+min-height: 40px;
 display: flex;
 justify-content: center;
 align-items: center;
