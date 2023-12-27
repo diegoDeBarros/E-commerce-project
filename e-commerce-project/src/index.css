@@ -1,10 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;700&display=swap');
 
 body {
+  width: 100vw !important;
   margin: 0;
   font-family: 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+header{
+  width: 100vw !important;
+}
+
+nav{
+  width: 100% !important;
+}
+
+
+
+
+
+#root{
+  width:100vw;
 }
 
 code {
