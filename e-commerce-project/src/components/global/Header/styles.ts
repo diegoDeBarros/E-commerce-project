@@ -25,6 +25,8 @@ export const ShoppingCartIcon = styled.img`
 `;
 
 export const SearchLoupeButton = styled.button`
-background-color: transparent;
-outline:none;
-border:none;`;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+`;

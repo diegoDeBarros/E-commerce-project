@@ -1,6 +1,11 @@
 import { Categories } from "./components/global/Categories";
 import { CategoryBarContainer } from "./components/global/Categories/styles";
+import { CategoriesMobile } from "./components/global/CategoriesMobile";
 import { Header } from "./components/global/Header";
+import {
+  OpenContext,
+  OpenHamburgerProvider,
+} from "./contexts/hamburgerMenuOpening/hamburgerOpening";
 import {
   VerifyUserDevice,
   VerifyUserDeviceProvider,
@@ -9,10 +14,13 @@ import {
 function App() {
   return (
     <>
-      <VerifyUserDeviceProvider>
-        <Header />
-      </VerifyUserDeviceProvider>
-      <Categories />
+      <OpenHamburgerProvider>
+        <VerifyUserDeviceProvider>
+          <Header />
+          <CategoriesMobile />
+        </VerifyUserDeviceProvider>
+      </OpenHamburgerProvider>
+      {/* <Categories /> */}
     </>
   );
 }
