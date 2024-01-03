@@ -1,51 +1,36 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { CarouselImg, CarouselMultipleContainer } from "./styles";
+import React from "react";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import { CarouselContainer } from "./styles";
+import { isDisabled } from "@testing-library/user-event/dist/utils";
 
-export default class MultipleItems extends Component {
-  render() {
-    const settings = {
-      arrows: true,
-      dots: true,
-      infinite: true,
-      speed: 400,
-      slidesToShow: 2,
-      slidesToScroll: 1,
-    };
-    return (
-      <CarouselMultipleContainer>
-        <h2> Multiple items </h2>
-        <Slider {...settings}>
-          <div>
-            <CarouselImg
-              src="https://i.imgur.com/GBxFt3b.jpg"
-              alt=""
-            ></CarouselImg>
-          </div>
-          <div>
-            <CarouselImg
-              src="https://i.imgur.com/GBxFt3b.jpg"
-              alt=""
-            ></CarouselImg>
-          </div>
-          <div>
-            <CarouselImg
-              src="https://i.imgur.com/GBxFt3b.jpg"
-              alt=""
-            ></CarouselImg>
-          </div>
-          <div>
-            <h3>
-              <CarouselImg
-                src="https://i.imgur.com/GBxFt3b.jpg"
-                alt=""
-              ></CarouselImg>
-            </h3>
-          </div>
-        </Slider>
-      </CarouselMultipleContainer>
-    );
-  }
-}
+const handleDragStart = (e: { preventDefault: () => any }) =>
+  e.preventDefault();
+
+const items = [
+  <img
+    src="https://i.imgur.com/GBxFt3b.jpg"
+    onDragStart={handleDragStart}
+    role="presentation"
+  />,
+  <img
+    src="https://i.imgur.com/GBxFt3b.jpg"
+    onDragStart={handleDragStart}
+    role="presentation"
+  />,
+  <img
+    src="https://i.imgur.com/GBxFt3b.jpg"
+    onDragStart={handleDragStart}
+    role="presentation"
+  />,
+];
+
+const Gallery = () => {
+  return (
+    <CarouselContainer>
+      <AliceCarousel mouseTracking items={items} />
+    </CarouselContainer>
+  );
+};
+
+export default Gallery;

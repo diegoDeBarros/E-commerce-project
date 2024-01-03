@@ -10,6 +10,7 @@ export const CategoryBarContainer = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  z-index:8;
 `;
 
 export const CategoryName = styled.span`

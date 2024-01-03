@@ -1,14 +1,7 @@
 import styled from "styled-components";
 
-export const CarouselMultipleContainer = styled.div`
-margin:1rem;
-height: 30px;
-width: 700px;
-box-sizing: border-box;
-background-color: black;
-`
+export const CarouselContainer = styled.div`
 
-export const CarouselImg = styled.img`
-width:200px;
-height:200px;
-`
+width:70px;
+height:30px !important;
+`;

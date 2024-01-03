@@ -1,5 +1,6 @@
+import AliceCarousel from "react-alice-carousel";
 import { Carousel } from "./components/global/Carousel";
-import CarouselMultiple from "./components/global/CarouselMultiple";
+import Gallery from "./components/global/CarouselMultiple";
 import { Categories } from "./components/global/Categories";
 import { CategoryBarContainer } from "./components/global/Categories/styles";
 import { CategoriesMobile } from "./components/global/CategoriesMobile";
@@ -23,7 +24,7 @@ function App() {
           <CategoriesMobile />
           <Categories />
           <Carousel />
-          <CarouselMultiple />
+          <Gallery />
         </VerifyUserDeviceProvider>
       </OpenHamburgerProvider>
     </PageContainer>
