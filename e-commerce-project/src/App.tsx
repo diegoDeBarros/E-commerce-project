@@ -14,21 +14,10 @@ import {
   VerifyUserDeviceProvider,
 } from "./contexts/verifyUserDevice";
 import { PageContainer } from "./styles";
+import { AppRoutes } from "./routes";
 
 function App() {
-  return (
-    <PageContainer>
-      <OpenHamburgerProvider>
-        <VerifyUserDeviceProvider>
-          <Header />
-          <CategoriesMobile />
-          <Categories />
-          <Carousel />
-          <Gallery />
-        </VerifyUserDeviceProvider>
-      </OpenHamburgerProvider>
-    </PageContainer>
-  );
+  return <AppRoutes />;
 }
 
 export default App;
