@@ -15,9 +15,11 @@ import {
 } from "./contexts/verifyUserDevice";
 import { PageContainer } from "./styles";
 import { AppRoutes } from "./routes";
+import CarouselMultiple from "./components/global/CarouselMultiple";
 
 function App() {
-  return <AppRoutes />;
+  // return <AppRoutes />;
+  return <CarouselMultiple />;
 }
 
 export default App;
