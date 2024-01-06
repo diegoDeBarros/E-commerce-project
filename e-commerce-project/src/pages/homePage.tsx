@@ -4,22 +4,25 @@ import { OpenHamburgerProvider } from "../contexts/hamburgerMenuOpening/hamburge
 import { VerifyUserDeviceProvider } from "../contexts/verifyUserDevice";
 import { PageContainer } from "../styles";
 import { CategoriesMobile } from "../components/global/CategoriesMobile";
-import Gallery from "../components/global/CarouselMultiple";
 import { Carousel } from "../components/global/Carousel";
-
+import { CarouselMultiple } from "../components/global/CarouselMultiple";
+import { Modal } from "../components/global/Modal";
+import { LoginScreen } from "../components/global/LoginScreen";
 
 export const HomePage = () => {
   return (
-    <PageContainer>
-      <OpenHamburgerProvider>
-        <VerifyUserDeviceProvider>
+    <OpenHamburgerProvider>
+      <VerifyUserDeviceProvider>
+        <PageContainer>
+          {/* <Modal /> */}
           <Header />
           <CategoriesMobile />
           <Categories />
           <Carousel />
-          <Gallery />
-        </VerifyUserDeviceProvider>
-      </OpenHamburgerProvider>
-    </PageContainer>
+          <CarouselMultiple />
+        </PageContainer>
+        <LoginScreen />
+      </VerifyUserDeviceProvider>
+    </OpenHamburgerProvider>
   );
 };
