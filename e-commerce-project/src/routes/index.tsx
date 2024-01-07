@@ -1,16 +1,19 @@
-import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
-import { HomePage } from "../pages/homePage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { SearchBar } from "../components/global/Input/SearchBar";
+import { VerifyUserDeviceProvider } from "../contexts/verifyUserDevice";
+import { HomePage } from "../pages/homePage";
+import { HeaderContextProvider } from "../contexts/HeaderContext/HeaderContext";
 
-export const AppRoutes = () => {
+export const AppRoutes: React.FC = (): React.JSX.Element => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage/>}></Route>
-        <Route path="/amãedediegoéboa" element={<HomePage/>}></Route>
-        <Route path="/about" element={<div><h1>Diego é gay</h1></div>}></Route>
-        <Route path="/teste/:qualquercoisa" element={<SearchBar/>}></Route>
-      </Routes>
+      <VerifyUserDeviceProvider>
+        <HeaderContextProvider>
+          <Routes>
+            <Route path="/" element={<HomePage />}></Route>
+          </Routes>
+        </HeaderContextProvider>
+      </VerifyUserDeviceProvider>
     </BrowserRouter>
   );
 };

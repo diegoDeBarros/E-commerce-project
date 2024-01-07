@@ -1,33 +1,37 @@
 import { createContext, useEffect, useState } from "react";
-import { verifyUserDeviceProps } from "./types";
+import { VerifyUserDeviceProps } from "./types";
 
-export const VerifyUserDevice = createContext<verifyUserDeviceProps>(
-  {} as verifyUserDeviceProps
-);
+export const VerifyUserDevice: React.Context<VerifyUserDeviceProps> =
+  createContext<VerifyUserDeviceProps>({} as VerifyUserDeviceProps);
 
-export const VerifyUserDeviceProvider = ({
+export const VerifyUserDeviceProvider: React.FC<VerifyUserDeviceProps> = ({
   children,
-}: verifyUserDeviceProps) => {
+}) => {
   const [deviceType, setDeviceType] = useState<"mobile" | "tablet" | "desktop">(
     "desktop"
   );
 
-  const verifyChange = () => {
-    if (window?.innerWidth >= 0 && window?.innerWidth <= 430) {
+  const verificarTamanhoTela = () => {
+    const larguraTela = window.innerWidth;
+
+    if (larguraTela <= 430) {
       setDeviceType("mobile");
-    }
-    if (window?.innerWidth > 430 && window?.innerWidth <= 1024) {
+    } else if (larguraTela <= 1024) {
       setDeviceType("tablet");
-    }
-    if (window?.innerWidth > 1025) {
+    } else {
       setDeviceType("desktop");
     }
   };
 
-  window.addEventListener("resize", () => {
-    verifyChange();
-  });
+  useEffect(() => {
+    verificarTamanhoTela();
 
+    window.addEventListener("resize", verificarTamanhoTela);
+
+    return () => {
+      window.removeEventListener("resize", verificarTamanhoTela);
+    };
+  }, []);
   return (
     <VerifyUserDevice.Provider value={{ deviceType }}>
       {children}
