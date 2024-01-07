@@ -21,7 +21,7 @@ export const HomePage = () => {
           <Carousel />
           <CarouselMultiple />
         </PageContainer>
-        <LoginScreen />
+        {/* <LoginScreen /> */}
       </VerifyUserDeviceProvider>
     </OpenHamburgerProvider>
   );
