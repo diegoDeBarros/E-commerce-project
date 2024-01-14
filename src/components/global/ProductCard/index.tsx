@@ -15,7 +15,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 }): JSX.Element => {
   return (
     <InfosContainer>
-      <ImageContainer src={imageLink} alt="" />
+      <ImageContainer src={imageLink[0]} alt="" />
       <TitleH1>{productDescription}</TitleH1>
       <PriceContainer>
         <InitialPriceSpan>DE</InitialPriceSpan>
