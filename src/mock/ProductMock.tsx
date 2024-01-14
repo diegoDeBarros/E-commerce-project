@@ -8,7 +8,7 @@ export const ProductMock: ProductCardProps[] = [
     ],
     discoutPrice: 12.7,
     originalPrice: 5.0,
-    sizes: ["p", "m"],
+    sizes: ["p", "m", "g", "gg"],
     sex: "Masculino",
   },
   {

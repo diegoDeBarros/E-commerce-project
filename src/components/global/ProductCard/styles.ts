@@ -23,6 +23,8 @@ export const Overlay = styled.div<{ isOpen: boolean | undefined }>`
   overflow: hidden;
   transition: height 0.2s ease; /* Tempo e função de transição */
 
+  display: flex;
+  justify-content: center;
 `;
 
 export const TitleH1 = styled.h1`
@@ -68,11 +70,14 @@ export const ImageContainer = styled.img`
 
 export const ProductSpecificationsWrapper = styled.div`
 
-width:100%;
+width:auto;
 height: 100%;
 background-color: transparent;
 display: flex;
 flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+
 
 `
 export const ProductSpecificationsList = styled.ul`
@@ -80,7 +85,9 @@ export const ProductSpecificationsList = styled.ul`
 width:100%;
 height: auto;
 display: flex;
-justify-content: space-around;
+justify-content: space-evenly;
+
+gap:4px;
 `
 export const ProductSpceficationName = styled.h2`
 

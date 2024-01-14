@@ -19,6 +19,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   productDescription,
   originalPrice,
   discoutPrice,
+  sizes,
+  sex,
 }): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,7 +47,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         <ProductSpecificationsWrapper>
           <ProductSpceficationName>Tamanho</ProductSpceficationName>
           <ProductSpecificationsList>
-            <ProductSpecificationButton>P</ProductSpecificationButton>
+            {sizes.map((size, index) => {
+              return (
+                <ProductSpecificationButton key={index}>
+                  {size}
+                </ProductSpecificationButton>
+              );
+            })}
           </ProductSpecificationsList>
           <ProductSpceficationName>Sexo</ProductSpceficationName>
           <ProductSpecificationsList>

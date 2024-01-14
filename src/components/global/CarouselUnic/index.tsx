@@ -3,7 +3,12 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import { ProductMock } from "../../../mock/ProductMock";
 import { ProductCard } from "../ProductCard";
-import { CarouselContainer, CarouselWrapper, NextButton, PrevButton } from "./styles";
+import {
+  CarouselContainer,
+  CarouselWrapper,
+  NextButton,
+  PrevButton,
+} from "./styles";
 
 export const CarouselUnique = () => {
   const settings = {
@@ -37,6 +42,8 @@ export const CarouselUnique = () => {
                 productDescription={product.productDescription}
                 originalPrice={product.originalPrice}
                 discoutPrice={product.discoutPrice}
+                sizes={product.sizes}
+                sex={product.sex}
               />
             );
           })}

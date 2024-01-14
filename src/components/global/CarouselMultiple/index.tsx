@@ -43,7 +43,7 @@ export const CarouselMultiple = () => {
                   productDescription={product.productDescription}
                   originalPrice={product.originalPrice}
                   discoutPrice={product.discoutPrice}
-                  size={product.size}
+                  sizes={product.sizes}
                   sex={product.sex}
                 />
               </>

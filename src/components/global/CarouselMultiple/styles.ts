@@ -6,9 +6,7 @@ export const CarouselWrapper = styled.div`
 display: flex;
 padding: 24px;
 justify-content: center;
-position:relative;
-
-
+width: 100%;
 `
 
 

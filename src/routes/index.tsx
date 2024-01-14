@@ -13,7 +13,6 @@ export const AppRoutes: React.FC = (): React.JSX.Element => {
           <Routes>
             <Route path="/" element={<HomePage />}></Route>
             <Route path="/produto" element={<ProductDetailsPage />}></Route>
-
           </Routes>
         </HeaderContextProvider>
       </VerifyUserDeviceProvider>
