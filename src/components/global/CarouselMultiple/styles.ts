@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
-export const CarouselContainer = styled.div`
-  width: 50%;
-  z-index: 999;
-  font-family: dosis;
 
+export const CarouselWrapper = styled.div`
+display: flex;
+padding: 24px;
+justify-content: center;
+`
+export const CarouselContainer = styled.div`
+  width: 100%;
   &.slick-list {
     background-color: black;
     z-index: 999 !important;

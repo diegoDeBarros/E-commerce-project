@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import { ProductMock } from "../../../mock/ProductMock";
 import { ProductCard } from "../ProductCard";
-import { CarouselContainer, NextButton, PrevButton } from "./styles";
+import { CarouselContainer, CarouselWrapper, NextButton, PrevButton } from "./styles";
 
 export const CarouselMultiple = () => {
   const settings = {
@@ -26,7 +26,7 @@ export const CarouselMultiple = () => {
   };
 
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <CarouselWrapper>
       <CarouselContainer>
         <Slider {...settings}>
           {ProductMock.map((product, index) => {
@@ -42,7 +42,7 @@ export const CarouselMultiple = () => {
           })}
         </Slider>
       </CarouselContainer>
-    </div>
+    </CarouselWrapper>
   );
 };
 

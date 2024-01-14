@@ -6,6 +6,7 @@ export const InfosContainer = styled.div`
   flex: 1;
   width: 100%;
   background-color: white;
+  font-family: dosis;
   height: 100%;
 `;
 
