@@ -1,18 +1,9 @@
-import React, { Component, useEffect } from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {
-  CarouselContainer,
-  FinalPriceSpan,
-  InfosContainer,
-  InitialPriceSpan,
-  NextButton,
-  PrevButton,
-  PriceContainer,
-  SliderContainer,
-  TitleH1,
-} from "./styles";
+import "slick-carousel/slick/slick.css";
+import { ProductMock } from "../../../mock/ProductMock";
+import { ProductCard } from "../ProductCard";
+import { CarouselContainer, NextButton, PrevButton } from "./styles";
 
 export const CarouselMultiple = () => {
   const settings = {
@@ -32,20 +23,31 @@ export const CarouselMultiple = () => {
     ),
     slidesToShow: 2,
     slidesToScroll: 1,
-    mobileFirst: true,
   };
 
-  // useEffect(()=>{
-  //   let elementoFilho = document.querySelector('slick-slider.slick-initialized"');
-  //   let elementoPai = elementoFilho.closest('div');
-  // })
-  // https://i.imgur.com/GBxFt3b.jpg
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <CarouselContainer>
         <Slider {...settings}>
-          <SliderContainer className="img-container">
-            <img src="https://i.imgur.com/II3QgoS.jpg" alt="" />
+          {ProductMock.map((product, index) => {
+            return (
+              <ProductCard
+                key={index}
+                imageLink={product.imageLink}
+                productDescription={product.productDescription}
+                originalPrice={product.originalPrice}
+                discoutPrice={product.discoutPrice}
+              />
+            );
+          })}
+        </Slider>
+      </CarouselContainer>
+    </div>
+  );
+};
+
+/**
+ *  <img src="https://i.imgur.com/II3QgoS.jpg" alt="" />
             <InfosContainer>
               <TitleH1>CAMISETA PRETA - MARCA TAL</TitleH1>
               <PriceContainer>
@@ -99,9 +101,4 @@ export const CarouselMultiple = () => {
                 <FinalPriceSpan>R$ 70,00</FinalPriceSpan>
               </PriceContainer>
             </InfosContainer>
-          </SliderContainer>
-        </Slider>
-      </CarouselContainer>
-    </div>
-  );
-};
+ */
