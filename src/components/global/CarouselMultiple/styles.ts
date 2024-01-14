@@ -1,16 +1,22 @@
 import styled from "styled-components";
 
 
+
 export const CarouselWrapper = styled.div`
 display: flex;
 padding: 24px;
 justify-content: center;
+position:relative;
+
+
 `
+
+
 export const CarouselContainer = styled.div`
   width: 100%;
   &.slick-list {
-    background-color: black;
-    z-index: 999 !important;
+    /* background-color: orange; */
+    /* z-index: 999 !important; */
   }
 
   .slick-track img {

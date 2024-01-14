@@ -8,6 +8,21 @@ export const InfosContainer = styled.div`
   background-color: white;
   font-family: dosis;
   height: 100%;
+  position: relative;
+  
+
+`;
+export const Overlay = styled.div<{ isOpen: boolean | undefined }>`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: ${({ isOpen }) => (isOpen ? '60%' : '0')};
+  background-color: rgba(255, 255, 255, 0.7); /* Cor de fundo translúcido */
+  color: orange; /* Cor do texto */
+  overflow: hidden;
+  transition: height 0.2s ease; /* Tempo e função de transição */
+
 `;
 
 export const TitleH1 = styled.h1`
@@ -50,3 +65,59 @@ export const ImageContainer = styled.img`
   width: 100%;
   height: 400px;
 `;
+
+export const ProductSpecificationsWrapper = styled.div`
+
+width:100%;
+height: 100%;
+background-color: transparent;
+display: flex;
+flex-direction: column;
+
+`
+export const ProductSpecificationsList = styled.ul`
+
+width:100%;
+height: auto;
+display: flex;
+justify-content: space-around;
+`
+export const ProductSpceficationName = styled.h2`
+
+font-size: 24px;
+color: black;
+font-family: Dosis;
+
+display: flex;
+justify-content: center;
+
+margin: 1rem 0 1rem 0;
+
+`
+
+export const ProductSpecificationLi = styled.li`
+
+
+
+`
+export const ProductSpecificationButton = styled.button`
+
+
+background-color: lightgray;
+
+height: 40px;
+width: 40px;
+min-width:40px;
+width:auto;
+
+font-weight: bold;
+
+border:none;
+border-radius: 8px;
+
+&:hover{
+  cursor: pointer;
+}
+
+
+`
