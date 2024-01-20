@@ -8,6 +8,7 @@ import { CategoriesMobile } from "../../components/global/CategoriesMobile";
 import { VerifyUserDevice } from "../../contexts/verifyUserDevice";
 import { HeaderContext } from "../../contexts/HeaderContext/HeaderContext";
 import { TemplateMainContainer } from "./style";
+import Footer from "../../components/global/Footer";
 
 export const TemplateMain: React.FC<TemplateMainProps> = ({
   children,
@@ -44,6 +45,7 @@ export const TemplateMain: React.FC<TemplateMainProps> = ({
         <Header />
         {deviceType === "desktop" ? <Categories /> : <CategoriesMobile />}
         {children}
+        <Footer />
       </TemplateMainContainer>
     </GridContainer>
   );

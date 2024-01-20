@@ -52,8 +52,6 @@ export const HomePage: React.FC = (): React.JSX.Element => {
       <CarouselDivWrapper>
         <CarouselMultiple />
       </CarouselDivWrapper>
-
-      <Footer />
     </GridContainer>
   );
 };
