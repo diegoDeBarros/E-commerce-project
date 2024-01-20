@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  width: 100vw;
+  grid-column: span 12;
   height: 70px;
   background-color: white;
   display: flex;

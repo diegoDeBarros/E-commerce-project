@@ -1,0 +1,3 @@
+interface RandomProductMessageProps {
+    productMessage: string
+}

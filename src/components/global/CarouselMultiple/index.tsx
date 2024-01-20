@@ -36,7 +36,6 @@ export const CarouselMultiple = () => {
         <Slider {...settings}>
           {ProductMock.map((product, index) => {
             return (
-              <>
                 <ProductCard
                   key={index}
                   imageLink={product.imageLink}
@@ -46,7 +45,6 @@ export const CarouselMultiple = () => {
                   sizes={product.sizes}
                   sex={product.sex}
                 />
-              </>
             );
           })}
         </Slider>
