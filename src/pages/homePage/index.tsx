@@ -11,6 +11,7 @@ import { VerifyUserDevice } from "../../contexts/verifyUserDevice";
 import { PageContainer } from "../../styles";
 import { CarouselDivWrapper, MainCarouselContainer } from "./styles";
 import { GridContainer } from "../../components/global/GridContainer/styles";
+import Footer from "../../components/global/Footer";
 
 export const HomePage: React.FC = (): React.JSX.Element => {
   const { deviceType } = useContext(VerifyUserDevice);
@@ -51,7 +52,8 @@ export const HomePage: React.FC = (): React.JSX.Element => {
       <CarouselDivWrapper>
         <CarouselMultiple />
       </CarouselDivWrapper>
-      
+
+      <Footer />
     </GridContainer>
   );
 };
