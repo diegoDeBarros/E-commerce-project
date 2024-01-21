@@ -3,9 +3,10 @@ import styled from "styled-components";
 
 export const CarouselWrapper = styled.div`
 display: flex;
-padding: 24px;
 justify-content: center;
 width: 100%;
+grid-column: span 12;
+
 `
 export const CarouselContainer = styled.div`
   width: 100%;

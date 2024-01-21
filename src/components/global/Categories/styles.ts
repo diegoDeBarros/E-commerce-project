@@ -6,6 +6,7 @@ export const CategoryBarContainer = styled.nav`
   height: auto;
   min-height: 40px;
   display: flex;
+  grid-column: span 12;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -15,7 +16,6 @@ export const CategoryName = styled.span`
   font-size: 14px;
   color: black;
   max-width: 100%;
-  /* padding: 5px; */
   color: black;
   font-family: "Dosis", sans-serif;
   font-weight: 400;

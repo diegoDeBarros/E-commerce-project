@@ -10,6 +10,7 @@ export const CategoryBarContainer = styled.nav<{ isOpen: boolean | undefined }>`
   height: 100vh;
   box-shadow: rgba(0, 0, 0, 0.1) 2px 4px 8px 2px;
   display: flex;
+  grid-column: span 12;
   flex-direction: column;
   justify-content: space-around;
   overflow-x: hidden;
