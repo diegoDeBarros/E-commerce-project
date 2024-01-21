@@ -2,13 +2,23 @@ import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
 
+margin-top: 2rem;
 display: flex;
 grid-column: span 12;
 `
 
+export const FooterLogoContainer = styled.div`
+
+display: flex;
+justify-content: center;
+width: 20%;
+`
+
 export const FooterLogo = styled.img`
 
-width: 20%;
+width: 200px;
+height: 200px;
+
 `
 
 export const FooterLinksWrapper = styled.div`

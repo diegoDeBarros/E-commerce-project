@@ -10,6 +10,7 @@ import {
   LinkListColumn,
   LinkLi,
   LinkA,
+  FooterLogoContainer,
 } from "./styles";
 
 import DiscordIconPng from "../../../icons/SocialMediaIcons/discord.png";
@@ -17,74 +18,66 @@ import FacebookIconPng from "../../../icons/SocialMediaIcons/facebook.png";
 import PinterestIconPng from "../../../icons/SocialMediaIcons/pinterest.png";
 import TwitterIconPng from "../../../icons/SocialMediaIcons/twitter.png";
 import WhatsappIconPng from "../../../icons/SocialMediaIcons/whatsapp.png";
+import EnaEtleLogo from "../../../imgs/EnaEtleLogo.png";
+import { FooterMock } from "../../../mock/FooterMock";
 export const Footer: React.FC = () => {
   return (
     <FooterWrapper>
-      <FooterLogo />
+      <FooterLogoContainer>
+        <FooterLogo src={EnaEtleLogo}></FooterLogo>
+      </FooterLogoContainer>
       <FooterLinksWrapper>
         <LinkColumnWrapper>
           <LinkListColumn>
             <LinkColumnTitle>INSTITUCIONAL</LinkColumnTitle>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
+            {FooterMock.map((link) => {
+              if (link.fromColumn === "INSTITUCIONAL") {
+                return (
+                  <LinkLi>
+                    <LinkA>{link.linkName}</LinkA>
+                  </LinkLi>
+                );
+              }
+            })}
           </LinkListColumn>
           <LinkListColumn>
-            <LinkColumnTitle>INSTITUCIONAL</LinkColumnTitle>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
+            <LinkColumnTitle>AJUDA</LinkColumnTitle>
+            {FooterMock.map((link) => {
+              if (link.fromColumn === "AJUDA") {
+                return (
+                  <LinkLi>
+                    <LinkA>{link.linkName}</LinkA>
+                  </LinkLi>
+                );
+              }
+            })}
           </LinkListColumn>
           <LinkListColumn>
-            <LinkColumnTitle>INSTITUCIONAL</LinkColumnTitle>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
+            <LinkColumnTitle>TERMOS DE USO</LinkColumnTitle>
+            {FooterMock.map((link) => {
+              if (link.fromColumn === "TERMOS DE USO") {
+                return (
+                  <LinkLi>
+                    <LinkA>{link.linkName}</LinkA>
+                  </LinkLi>
+                );
+              }
+            })}
           </LinkListColumn>
           <LinkListColumn>
-            <LinkColumnTitle>INSTITUCIONAL</LinkColumnTitle>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
-            <LinkLi>
-              <LinkA>Onde estamos</LinkA>
-            </LinkLi>
+            {
+              //TODO: fazer lógica de MAIS BUCADOS ----------- envolverá lógica no
+            }
+            <LinkColumnTitle>MAIS BUSCADOS</LinkColumnTitle>
+            {FooterMock.map((link) => {
+              if (link.fromColumn === "MAIS BUSCADOS") {
+                return (
+                  <LinkLi>
+                    <LinkA>{link.linkName}</LinkA>
+                  </LinkLi>
+                );
+              }
+            })}
           </LinkListColumn>
         </LinkColumnWrapper>
       </FooterLinksWrapper>
